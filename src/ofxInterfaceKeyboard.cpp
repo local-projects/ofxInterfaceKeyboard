@@ -132,6 +132,8 @@ void ofxInterfaceKeyboard::loadConfig(const string & path){
 					if (k->chars.find("default") != k->chars.end() ){
 						k->setName(k->chars["default"]);
 					}
+                    
+
 				}
 
 				ofAddListener(k->eventClick, this, &ofxInterfaceKeyboard::onCharKeyClick);
@@ -207,6 +209,18 @@ void ofxInterfaceKeyboard::handleSpecialKey(const string & key){
 			content = content.substr(0, content.size()-1);
 		}
 	}
+    
+    if(key == "dotnl"){
+        content += ".nl";
+    }
+    
+    if(key == "dotcom"){
+        content += ".com";
+    }
+    
+    if(key == "at"){
+        content += "@";
+    }
 
 	if(key == "esc"){
 	}
