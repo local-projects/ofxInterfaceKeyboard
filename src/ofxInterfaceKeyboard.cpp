@@ -221,6 +221,10 @@ void ofxInterfaceKeyboard::handleSpecialKey(const string & key){
     if(key == "at"){
         content += "@";
     }
+    
+    if(key == "period"){
+        content += ".";
+    }
 
 	if(key == "esc"){
 	}
