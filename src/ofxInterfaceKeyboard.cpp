@@ -213,6 +213,10 @@ void ofxInterfaceKeyboard::handleSpecialKey(const string & key){
     if(key == "dotnl"){
         content += ".nl";
     }
+
+	if(key == "space"){
+        content += " ";
+    }
     
     if(key == "dotcom"){
         content += ".com";
