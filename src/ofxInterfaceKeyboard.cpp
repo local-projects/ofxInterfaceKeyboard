@@ -269,6 +269,8 @@ void ofxInterfaceKeyboard::update(float dt){}
 
 void ofxInterfaceKeyboard::draw(){
 	ofSetColor(255);
+
+
 	auto it = kbTextures.find(stateStr);
 	if(it != kbTextures.end()){
 		it->second.depressed->draw(0,0, getWidth(), getHeight());
@@ -296,7 +298,9 @@ void ofxInterfaceKeyboard::draw(){
 		for(auto b: pressedChars){
 			ofVec2f pos = b->getPosition();
 			ofVec2f size = b->getSize();
+            ofSetColor(100); 
 			kbOnTex->drawSubsection(pos.x, pos.y, size.x, size.y, pos.x, pos.y, size.x, size.y);
+            ofSetColor(255); 
 		}
 	}
 }
