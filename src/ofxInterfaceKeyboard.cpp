@@ -322,7 +322,9 @@ void ofxInterfaceKeyboard::draw()
         for( auto b : pressedChars ) {
             ofVec2f pos = b->getPosition();
             ofVec2f size = b->getSize();
-            ofSetColor( 100 );
+            ofSetColor( 150, 100 );
+            float buffer = 2.0f; 
+            ofDrawRectangle( pos.x, pos.y, size.x, size.y );
             kbOnTex->drawSubsection( pos.x, pos.y, size.x, size.y, pos.x, pos.y, size.x, size.y );
             ofSetColor( 255 );
         }
